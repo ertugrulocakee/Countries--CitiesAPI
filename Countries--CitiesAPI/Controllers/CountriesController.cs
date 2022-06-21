@@ -2,6 +2,7 @@
 using Countries__Cities.Core.Concrete;
 using Countries__Cities.Core.DTOs;
 using Countries__Cities.Core.Service;
+using Countries__CitiesAPI.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,6 +27,7 @@ namespace Countries__CitiesAPI.Controllers
 
         }
 
+        [ServiceFilter(typeof(NotFoundFilter<Country>))]
         [HttpGet("[action]{CountryID}")]
         public async Task<IActionResult> GetCountryWithCity(int CountryID)
         {
@@ -46,6 +48,8 @@ namespace Countries__CitiesAPI.Controllers
 
         }
 
+
+        [ServiceFilter(typeof(NotFoundFilter<Country>))]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetCountry(int id)
         {
@@ -94,7 +98,7 @@ namespace Countries__CitiesAPI.Controllers
 
         }
 
-
+         
 
     }
 }

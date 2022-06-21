@@ -8,7 +8,12 @@ using Countries__Cities.Repository.Repository;
 using Countries__Cities.Repository.UnitOfWorks;
 using Countries__Cities.Service.Mapping;
 using Countries__Cities.Service.Services;
+using Countries__Cities.Service.Validations;
+using Countries__CitiesAPI.Filters;
+using Countries__CitiesAPI.Middlewares;
 using Countries__CitiesAPI.Modules;
+using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
@@ -17,22 +22,23 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 
+builder.Services.AddControllers(options => { options.Filters.Add(new ValidateFilterAttribute()); }).AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<CountryDTOValidation>()); 
 
-builder.Services.AddControllers();
+builder.Services.Configure<ApiBehaviorOptions>(options =>
+
+ options.SuppressModelStateInvalidFilter = true   // apinin kendi modelini inaktif ettik! 
+
+);
+
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-//builder.Services.AddScoped<IUnitOfWork, UnitOfWork>(); 
-//builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>)); 
-//builder.Services.AddScoped(typeof(IService<>), typeof(Service<>)); 
 builder.Services.AddAutoMapper(typeof(MapProfile));
-//builder.Services.AddScoped(typeof(ICountryRepository), typeof(CountryRepository)); 
-//builder.Services.AddScoped(typeof(ICountryService), typeof(CountryService)); 
-//builder.Services.AddScoped(typeof(ICityService), typeof(CityService));   
-//builder.Services.AddScoped(typeof(ICityRepository), typeof(CityRepository)); 
 
+builder.Services.AddScoped(typeof(NotFoundFilter<>));
 
 
 builder.Services.AddDbContext<AppDbContext>(x =>
@@ -58,6 +64,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCustomException();
 
 app.UseAuthorization();
 

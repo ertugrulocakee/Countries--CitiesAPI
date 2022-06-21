@@ -1,6 +1,7 @@
 ﻿using Countries__Cities.Core.Repository;
 using Countries__Cities.Core.Service;
 using Countries__Cities.Core.UnitOfWorks;
+using Countries__Cities.Service.Exceptions;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -51,7 +52,16 @@ namespace Countries__Cities.Service.Services
 
         public async Task<T> GetByIdAsync(int id)
         {
-            return await _repository.GetByIdAsync(id);
+            var value =  await _repository.GetByIdAsync(id);
+
+            if (value == null)
+            {
+
+                throw new NotFoundException($"{typeof(T).Name}({id}) not found!");
+
+            }
+
+            return value;       
         }
 
         public  async Task RemoveAsync(T entity)
