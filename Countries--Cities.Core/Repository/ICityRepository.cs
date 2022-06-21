@@ -10,9 +10,9 @@ namespace Countries__Cities.Core.Repository
     public interface ICityRepository : IGenericRepository<City>
     {
 
-        Task<City> GetCityWithCountry(int CityID);
+        Task<City> GetCityWithCountryAsync(int CityID);
 
-        Task<List<City>> GetCitiesWithCountry();  
+        Task<List<City>> GetCitiesWithCountryAsync();  
 
     }
 }

@@ -11,9 +11,9 @@ namespace Countries__Cities.Core.Service
     public interface ICountryService : IService<Country>
     {
 
-        Task<CustomResponseDTO<CountryWithCityDTO>> TGetCountryWithCity(int CountryID);
+        Task<CustomResponseDTO<CountryWithCityDTO>> TGetCountryWithCityAsync(int CountryID);
 
-        Task<CustomResponseDTO<List<CountryWithCityDTO>>> TGetCountriesWithCity();
+        Task<CustomResponseDTO<List<CountryWithCityDTO>>> TGetCountriesWithCityAsync();
 
 
     }
