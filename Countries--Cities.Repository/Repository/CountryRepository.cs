@@ -12,7 +12,7 @@ namespace Countries__Cities.Repository.Repository
 {
     public class CountryRepository : GenericRepository<Country>, ICountryRepository
     {
-        public CountryRepository(AppDbContext context, DbSet<Country> dbSet) : base(context, dbSet)
+        public CountryRepository(AppDbContext context) : base(context)
         {
         }
 
