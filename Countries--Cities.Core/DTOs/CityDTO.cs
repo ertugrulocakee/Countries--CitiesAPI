@@ -9,6 +9,7 @@ namespace Countries__Cities.Core.DTOs
     public class CityDTO : BaseDTO  
     {
 
+        public int CountryId { get; set; } 
 
     }
 }
