@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Countries--CitiesAPI", "Countries--CitiesAPI\Countries--CitiesAPI.csproj", "{60DBD51A-D620-4C96-982F-6E9DAFE9BB72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Countries--Cities.Core", "Countries--Cities.Core\Countries--Cities.Core.csproj", "{C4D3166D-E744-4C7B-A8B2-FBC5E9473942}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Countries--Cities.Repository", "Countries--Cities.Repository\Countries--Cities.Repository.csproj", "{27FA066E-3BA1-487B-A023-793D36E2935B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Countries--Cities.Service", "Countries--Cities.Service\Countries--Cities.Service.csproj", "{3C4B10AA-B8FC-4A3A-BF3C-A2517E190C2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Countries--Cities.Caching", "Countries--Cities.Caching\Countries--Cities.Caching.csproj", "{EE259BBD-8E8C-48C3-9579-2A549AEEBAF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Countries--Cities.WEB", "Countries--Cities.WEB\Countries--Cities.WEB.csproj", "{BA3A691D-790D-4094-81CA-2A7761D27398}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60DBD51A-D620-4C96-982F-6E9DAFE9BB72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60DBD51A-D620-4C96-982F-6E9DAFE9BB72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60DBD51A-D620-4C96-982F-6E9DAFE9BB72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60DBD51A-D620-4C96-982F-6E9DAFE9BB72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4D3166D-E744-4C7B-A8B2-FBC5E9473942}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4D3166D-E744-4C7B-A8B2-FBC5E9473942}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4D3166D-E744-4C7B-A8B2-FBC5E9473942}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4D3166D-E744-4C7B-A8B2-FBC5E9473942}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27FA066E-3BA1-487B-A023-793D36E2935B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27FA066E-3BA1-487B-A023-793D36E2935B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27FA066E-3BA1-487B-A023-793D36E2935B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27FA066E-3BA1-487B-A023-793D36E2935B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C4B10AA-B8FC-4A3A-BF3C-A2517E190C2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C4B10AA-B8FC-4A3A-BF3C-A2517E190C2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C4B10AA-B8FC-4A3A-BF3C-A2517E190C2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C4B10AA-B8FC-4A3A-BF3C-A2517E190C2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE259BBD-8E8C-48C3-9579-2A549AEEBAF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE259BBD-8E8C-48C3-9579-2A549AEEBAF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE259BBD-8E8C-48C3-9579-2A549AEEBAF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE259BBD-8E8C-48C3-9579-2A549AEEBAF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA3A691D-790D-4094-81CA-2A7761D27398}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA3A691D-790D-4094-81CA-2A7761D27398}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA3A691D-790D-4094-81CA-2A7761D27398}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA3A691D-790D-4094-81CA-2A7761D27398}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {63C7B100-59DD-450B-B1AB-9F6C8C98AAA3}
+	EndGlobalSection
+EndGlobal
