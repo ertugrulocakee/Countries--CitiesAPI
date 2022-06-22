@@ -10,6 +10,7 @@ using Countries__Cities.Service.Services;
 using System.Reflection;
 using Module = Autofac.Module;
 using Autofac;
+using Countries__Cities.Caching.ServicesCaching;
 
 namespace Countries__CitiesAPI.Modules
 {
@@ -36,7 +37,10 @@ namespace Countries__CitiesAPI.Modules
 
             builder.RegisterAssemblyTypes(apiAssembly, repoAssembly, serviceAssembly).Where(x => x.Name.EndsWith("Service")).AsImplementedInterfaces().InstancePerLifetimeScope();
 
-          
+
+            builder.RegisterType<CountryServiceWithCaching>().As<ICountryService>();
+            builder.RegisterType<CityServiceWithCaching>().As<ICityService>();
+       
         }
     }
 }
