@@ -19,8 +19,7 @@ namespace Countries__Cities.Service.Mapping
             CreateMap<Country, CountryDTO>().ReverseMap();
             CreateMap<City, CityWithCountryDTO>();
             CreateMap<Country, CountryWithCityDTO>();
-
-
+      
         }
 
 

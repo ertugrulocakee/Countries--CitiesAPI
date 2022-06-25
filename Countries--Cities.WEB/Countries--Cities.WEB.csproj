@@ -7,4 +7,12 @@
     <RootNamespace>Countries__Cities.WEB</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Countries--CitiesAPI\Countries--CitiesAPI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Modules\" />
+  </ItemGroup>
+
 </Project>
