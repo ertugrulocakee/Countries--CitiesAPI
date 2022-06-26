@@ -25,11 +25,12 @@ namespace Countries__Cities.WEB.Services
 
         }
 
-        public async Task<CountryWithCityViewModel> GetByIdAsync(int id){ 
+
+        public async Task<CountryViewModel> GetByIdAsync(int id){ 
          
 
-            var response = await _httpClient.GetFromJsonAsync<CustomResponseDTO<CountryWithCityViewModel>>($"countries/{id}");
-            return _mapper.Map<CountryWithCityViewModel>(response.Data); 
+            var response = await _httpClient.GetFromJsonAsync<CustomResponseDTO<CountryDTO>>($"countries/{id}");
+            return _mapper.Map<CountryViewModel>(response.Data); 
 
         }
 
