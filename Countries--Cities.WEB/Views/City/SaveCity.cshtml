@@ -1,0 +1,64 @@
+﻿@model Countries__Cities.WEB.Models.CityViewModel
+
+@{
+    ViewData["Title"] = "SaveCity";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+@if (ViewBag.Message != null)
+{
+    <script type="text/javascript">
+        window.onload = function () {
+            alert('@ViewBag.Message');
+        };
+    </script>
+}  
+
+
+<div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Şehir Ekle</h4>
+
+
+            <form asp-action="SaveCity" method="post" asp-controller="City" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label asp-for="name"></label>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+
+             <div class="form-group">
+                <label asp-for="population"></label>
+                <input asp-for="population" class="form-control" />
+                <span asp-validation-for="population" class="text-danger"></span>
+            </div>
+
+     
+             <div class="form-group">
+             <label asp-for="CountryId"></label>
+             <select asp-for="CountryId" asp-items="ViewBag.countries" class="form-control" ></select>               
+            </div>
+
+   
+             <div class="form-group">
+                <label asp-for="image"></label>
+                <input type="file" asp-for="image" class="form-control" required/>
+                
+            </div>
+
+
+            <div class="form-group">
+
+                <input type="submit" value="Save" class="btn-primary" />
+
+            </div>
+        </form>
+
+                    </div>
+                </div>
+              </div>
+
+
+
