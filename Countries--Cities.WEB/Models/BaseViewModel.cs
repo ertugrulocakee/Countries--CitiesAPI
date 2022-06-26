@@ -9,6 +9,8 @@
 
         public int population { get; set; }
 
+        public IFormFile image { get; set; }
+
         public string imageUrl { get; set; }
 
     }

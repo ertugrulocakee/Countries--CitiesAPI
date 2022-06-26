@@ -10,8 +10,8 @@ namespace Countries__Cities.WEB.Mapping
         public MVCMapProfile()
         {
 
-            CreateMap<CountryDTO, CountryViewModel>();
-            CreateMap<CityDTO, CityViewModel>();
+            CreateMap<CountryDTO, CountryViewModel>().ReverseMap();
+            CreateMap<CityDTO, CityViewModel>().ReverseMap();
             CreateMap<CountryWithCityDTO, CountryWithCityViewModel>();
             CreateMap<CityWithCountryDTO, CityWithCountryViewModel>();
 
